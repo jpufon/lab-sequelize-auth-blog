@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "DTBase101",
+    "database": "Blogger_DataBase",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

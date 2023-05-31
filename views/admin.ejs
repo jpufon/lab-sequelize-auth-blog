@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>My Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="/css/theme-8.css">
+    
+
+</head> 
+
+<body>
+    
+    <%- include ('partials/sidebar.ejs') %> 
+    
+    <div class="main-wrapper">
+	    	    
+	    <article class="about-section py-5">
+		    <div class="container">
+			    <h2 class="title mb-3">Admin Page</h2>
+			    
+			    This page should be protected
+		    </div>
+	    </article><!--//about-section-->
+	    
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center">
+			    <h2 class="heading">Use this form to create, edit new blogs</h2>
+			    <div class="intro">You should protect this page! </div>
+			    <form class="signup-form form-inline flex-column  justify-content-center pt-3" action="/admin"  method="POST" >
+                    <div class="form-group mb-4">
+
+                        <label class="sr-only" for="title">blog Title</label>
+                        <input  id="title"  name="title" class="form-control mr-md-1" placeholder="Enter title">
+                    </div>
+
+					<div class="form-group mb-4">
+                        <label class="sr-only" for="body">blog body</label>
+						<textarea  id="body" name="body" class="form-control mr-md-1 " cols="30" rows="10" placeholder="Enter blog body"></textarea>
+                        
+                    </div>
+						
+
+					<div class="form-group">
+                        <label  for="is_published" >Publish blog?</label><br>
+                        <input  type="checkbox" id="isPublished" name="is_published" class="ml-2" >
+                    </div>
+
+
+					<br>
+					<br>
+					
+
+                    <button type="submit" class="btn btn-primary">Create New Blog</button>
+                </form>
+		    </div><!--//container-->
+			
+	    </section>
+
+		
+
+		<div class="row">
+
+			<div class="col-12 my-5">
+				<h1 class=" text-center">Blogs</h1>
+			</div>
+			<div class="col-6 offset-1">
+
+                
+                    
+                    <ul class="blog-container">
+						<% blogs.forEach(blog => { 
+							%>
+                        <li class="blog" id="<%= blog.id %>">
+                            <h4 id="<%= blog.id %>" class="blog-title"><%= blog.title %> </h4> 
+                            <textarea readonly id="<%= blog.id %>" class="blog-body" name="content" cols="120" rows="5"><%= blog.body %> </textarea>
+
+                            <button class="btn btn-success mb-3 edit-button">Edit</button>
+                            <button class="btn btn-danger mb-3 delete-button">Delete</button>
+                            <button class="btn btn-info mb-3 save-button" style="display: none;">Save</button>
+                            <button class="btn btn-warning mb-3 cancel-button" style="display: none;">Cancel</button>
+                        </li>
+						<% 
+					}) %>
+                    </ul>
+                 
+				
+			</div>
+		</div>
+    
+    </div>
+<style>
+	.blog-container {
+  list-style: none;
+  padding: 0;
+}
+
+.blog {
+  background-color: #f1f5f9;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  color: #2b6cb0;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.blog-body {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  background-color: #edf2f7;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.button-group button {
+  margin-right: 5px;
+}
+</style>
+  
+    <!-- Javascript -->          
+    <script src="/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/plugins/popper.min.js"></script> 
+    <script src="/plugins/bootstrap/js/bootstrap.min.js"></script> 
+	<script src="/js/adminclient.js"></script>
+    
+        
+    
+
+</body>
+</html> 
+
