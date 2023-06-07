@@ -4,6 +4,7 @@
     "password": "DTBase101",
     "database": "Blogger_DataBase",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DB_CONNECTION"
   }
 }
