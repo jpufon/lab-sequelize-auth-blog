@@ -1,4 +1,4 @@
-# Blog assignment
+# Blog
 
 In this assignment you are going to create a blog application using sequelize as your ORM and postgres as your database. Here are the features you will implement:
 
@@ -65,6 +65,50 @@ user should be able to
 - on admin page, blog owners are able to see this page. They should be able  to submit a new blog, edit an existing blog or delete a blog
 
 
+--------------------------------------------------------
+
+   ## Blog
+user is able to
+- register for a new account 
+- registered users should be able to see all blogs and blog details 
+- unregistered user directed to login page (can't see list of blogs)
+- on admin page, blog owners are able to see this page. They should be able  to submit a new blog, edit an existing blog or delete a blog
 
 
-    
+## Getting Started
+
+These instructions will give you a copy of the project up and running on
+your local machine for development and testing purposes.
+
+
+### Installing
+
+run cmd on your terminal
+git clone "link of this repos"
+once the repo is clone run "npm install"-install all dependecies
+
+## Running the projects
+
+-nodemon app.js
+
+## Built With
+
+  -websocket.io
+  -Node.js
+  -Express.js
+  -css
+  -JavaScript
+  -PostgresSql
+  -passport.io
+
+## Authors
+
+  - **Jordan Pufon*
+  - - **Veronica Lino*
+
+## Acknowledgments
+
+  - Hat tip to anyone whose code is used
+  - Inspiration
+  - etc
+
