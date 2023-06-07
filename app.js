@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const helmet = require('helmet');
-const port = 3000;
+const port = 5432;
 const passport = require('passport');
 require('./auth/passport-config')(passport)
 
